@@ -1,0 +1,311 @@
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    font-size: 14px;
+    --red: #e54d42;
+    --orange: #f37b1d;
+    --yellow: #fbbd08;
+    --olive: #8dc63f;
+    --green: #39b54a;
+    --cyan: #1cbbb4;
+    --blue: #0081ff;
+    --purple: #6739b6;
+    --mauve: #9c26b0;
+    --pink: #e03997;
+    --brown: #a5673f;
+    --grey: #8799a3;
+    --black: #333;
+    --darkGray: #666;
+    --gray: #aaa;
+    --ghostWhite: #f1f1f1;
+    --white: #fff;
+    --redLight: #fadbd9;
+    --orangeLight: #fde6d2;
+    --yellowLight: #fef2ce;
+    --oliveLight: #e8f4d9;
+    --greenLight: #d7f0db;
+    --cyanLight: #d2f1f0;
+    --blueLight: #cce6ff;
+    --purpleLight: #e1d7f0;
+    --mauveLight: #ebd4ef;
+    --pinkLight: #f9d7ea;
+    --brownLight: #ede1d9;
+    --greyLight: #e7ebed;
+    --gradualRed: linear-gradient(45deg,#f43f3b,#ec008c);
+    --gradualOrange: linear-gradient(45deg,#ff9700,#ed1c24);
+    --gradualGreen: linear-gradient(45deg,#39b54a,#8dc63f);
+    --gradualPurple: linear-gradient(45deg,#9000ff,#5e00ff);
+    --gradualPink: linear-gradient(45deg,#ec008c,#6739b6);
+    --gradualBlue: linear-gradient(45deg,#0081ff,#1cbbb4);
+    --ShadowSize: 3px 3px 4px;
+    --redShadow: rgba(204,69,59,0.2);
+    --orangeShadow: rgba(217,109,26,0.2);
+    --yellowShadow: rgba(224,170,7,0.2);
+    --oliveShadow: rgba(124,173,55,0.2);
+    --greenShadow: rgba(48,156,63,0.2);
+    --cyanShadow: rgba(28,187,180,0.2);
+    --blueShadow: rgba(0,102,204,0.2);
+    --purpleShadow: rgba(88,48,156,0.2);
+    --mauveShadow: rgba(133,33,150,0.2);
+    --pinkShadow: rgba(199,50,134,0.2);
+    --brownShadow: rgba(140,88,53,0.2);
+    --greyShadow: rgba(114,130,138,0.2);
+    --grayShadow: rgba(114,130,138,0.2);
+    --blackShadow: rgba(26,26,26,0.2);
+}
+
+.Some-show {
+    /* 文字溢出禁止换行 */
+    white-space: nowrap;
+    /* 超出部分隐藏 */
+    overflow: hidden;
+    /* 文字溢出部分点点... */
+    text-overflow: ellipsis;
+}
+
+.list-hide::-webkit-scrollbar {
+    /* 滚动条整体样式 */
+    width: 0;
+    height: 0;
+}
+
+@media (min-width: 700px) {
+
+    /* ········· ········· 设置滚动条的样式 ········· ········· */
+    .list-scroll::-webkit-scrollbar {
+        /* 滚动条整体样式 */
+        width: 10px;
+        height: 10px;
+    }
+
+    .list-scroll::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgba(135, 207, 235, 0.7);
+        background-image: linear-gradient(45deg,
+                rgba(255, 255, 255, 0.5) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.5) 50%,
+                rgba(255, 255, 255, 0.5) 75%,
+                transparent 75%,
+                transparent);
+    }
+
+    .list-scroll::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(135, 207, 235, 1);
+        background-image: linear-gradient(45deg,
+                rgba(255, 255, 255, 0.5) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.5) 50%,
+                rgba(255, 255, 255, 0.5) 75%,
+                transparent 75%,
+                transparent);
+    }
+
+}
+
+@keyframes show {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    60% {
+        transform: translateY(40upx);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes showLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    60% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.bg-red {
+	background-color: #e54d42;
+	color: #ffffff;
+}
+
+.bg-orange {
+	background-color: #f37b1d;
+	color: #ffffff;
+}
+
+.bg-yellow {
+	background-color: #fbbd08;
+	color: #333333;
+}
+
+.bg-olive {
+	background-color: #8dc63f;
+	color: #ffffff;
+}
+
+.bg-green {
+	background-color: #39b54a;
+	color: #ffffff;
+}
+
+.bg-cyan {
+	background-color: #1cbbb4;
+	color: #ffffff;
+}
+
+.bg-blue {
+	background-color: #0081ff;
+	color: #ffffff;
+}
+
+.bg-purple {
+	background-color: #6739b6;
+	color: #ffffff;
+}
+
+.bg-mauve {
+	background-color: #9c26b0;
+	color: #ffffff;
+}
+
+.bg-pink {
+	background-color: #e03997;
+	color: #ffffff;
+}
+
+.bg-brown {
+	background-color: #a5673f;
+	color: #ffffff;
+}
+
+.bg-grey {
+	background-color: #8799a3;
+	color: #ffffff;
+}
+
+.bg-gray {
+	background-color: #f0f0f0;
+	color: #333333;
+}
+
+.bg-black {
+	background-color: #333333;
+	color: #ffffff;
+}
+
+.bg-white {
+	background-color: #ffffff;
+	color: #666666;
+}
+
+.bg-shadeTop {
+	background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.01));
+	color: #ffffff;
+}
+
+.bg-shadeBottom {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 1));
+	color: #ffffff;
+}
+
+.bg-red.light {
+	color: #e54d42;
+	background-color: #fadbd9;
+}
+
+.bg-orange.light {
+	color: #f37b1d;
+	background-color: #fde6d2;
+}
+
+.bg-yellow.light {
+	color: #fbbd08;
+	background-color: #fef2ced2;
+}
+
+.bg-olive.light {
+	color: #8dc63f;
+	background-color: #e8f4d9;
+}
+
+.bg-green.light {
+	color: #39b54a;
+	background-color: #d7f0dbff;
+}
+
+.bg-cyan.light {
+	color: #1cbbb4;
+	background-color: #d2f1f0;
+}
+
+.bg-blue.light {
+	color: #0081ff;
+	background-color: #cce6ff;
+}
+
+.bg-purple.light {
+	color: #6739b6;
+	background-color: #e1d7f0;
+}
+
+.bg-mauve.light {
+	color: #9c26b0;
+	background-color: #ebd4ef;
+}
+
+.bg-pink.light {
+	color: #e03997;
+	background-color: #f9d7ea;
+}
+
+.bg-brown.light {
+	color: #a5673f;
+	background-color: #ede1d9;
+}
+
+.bg-grey.light {
+	color: #8799a3;
+	background-color: #e7ebed;
+}
+
+.bg-gradual-red {
+	background-image: linear-gradient(45deg, #f43f3b, #ec008c);
+	color: #ffffff;
+}
+
+.bg-gradual-orange {
+	background-image: linear-gradient(45deg, #ff9700, #ed1c24);
+	color: #ffffff;
+}
+
+.bg-gradual-green {
+	background-image: linear-gradient(45deg, #39b54a, #8dc63f);
+	color: #ffffff;
+}
+
+.bg-gradual-purple {
+	background-image: linear-gradient(45deg, #9000ff, #5e00ff);
+	color: #ffffff;
+}
+
+.bg-gradual-pink {
+	background-image: linear-gradient(45deg, #ec008c, #6739b6);
+	color: #ffffff;
+}
+
+.bg-gradual-blue {
+	background-image: linear-gradient(45deg, #0081ff, #1cbbb4);
+	color: #ffffff;
+}

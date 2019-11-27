@@ -1,0 +1,28 @@
+{
+    "presets": [
+        "@vue/app",
+        [
+            "@babel/preset-env",
+            {
+                "modules": false
+            }
+        ]
+    ],
+    "plugins": [
+        [
+            "import",
+            {
+                "libraryName": "muse-ui",
+                "libraryDirectory": "lib",
+                "camel2DashComponentName": false
+            }
+        ],
+        [
+            "component",
+            {
+                "libraryName": "element-ui",
+                "styleLibraryName": "theme-chalk"
+            }
+        ]
+    ]
+}

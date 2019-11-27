@@ -2,8 +2,6 @@
 // webpack用的是node环境，不能使用import，要用require
 const webpack = require("webpack");
 const path = require("path");
-const FileManagerPlugin = require('filemanager-webpack-plugin') // 直接打包成zip压缩文件
-const time = new Date().getTime();
 
 module.exports = {
     // productionSourceMap -- 是否打包map文件(映射文件，作用是调试时会显示错误在第几行。上线后用不着)
@@ -63,17 +61,6 @@ module.exports = {
                 "window.jQuery": "jquery",
                 Popper: ["popper.js", "default"]
             }),
-            // vue-cli@3.0 直接打包成zip压缩文件
-            new FileManagerPlugin({  //初始化 filemanager-webpack-plugin 插件实例
-                onEnd: {
-                    // delete: [   //首先需要删除项目根目录下的dist.zip
-                    //     './myDist/dist.zip',
-                    // ],
-                    archive: [ //然后我们选择dist文件夹将之打包成dist.zip并放在根目录
-                        { source: './myDist', destination: './myDist/dist-' + time + '.zip' },
-                    ]
-                }
-            })
         ]
         // module -- 模块
         // module: {}

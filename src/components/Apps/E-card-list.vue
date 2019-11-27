@@ -34,7 +34,7 @@ export default {
           title: "数据存储",
           name: "dbank",
           icon: "el-icon-upload",
-          url: "http://yun.a-1.vip",
+          url: "http://a-1.vip/yun",
           bgClass:'bg-blue'
         },
         {

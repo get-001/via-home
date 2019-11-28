@@ -1,6 +1,6 @@
 <template>
   <div class="Timeline">
-    <h3 style="text-align:center;">Timeline 时间线</h3>
+    <h3 style="text-align:center;">Timeline</h3>
     <mu-container class="wraper-content">
       <el-timeline reverse>
         <el-timeline-item
@@ -20,19 +20,19 @@ export default {
       activities: [
         {
           content: "项目构建",
-          timestamp: "2019-08-14"
+          timestamp: "2019-10-14"
         },
         {
           content: "完成书签、搜索的基本功能",
-          timestamp: "2019-08-15"
+          timestamp: "2019-10-15"
         },
         {
           content: "音乐卡片的展示(歌词、下载、进度)",
-          timestamp: "2019-08-17"
+          timestamp: "2019-10-17"
         },
         {
           content: "融合音乐搜索功能，提升性能，修复bug",
-          timestamp: "2019-08-18"
+          timestamp: "2019-10-18"
         },
         {
           content: "发布第一个beta版本 v1.0 beta",
@@ -46,6 +46,11 @@ export default {
           content:
             "个性化自定义配置、一键更换壁纸、支持下载当前壁纸、缓存配置数据、远程加载书签、界面优化处理、扩展个人中心页面...",
           timestamp: "2019-10-25"
+        },
+        {
+          content:
+            "扩展页增加更多的模块，自定义CSS样式注入，新增magi引擎",
+          timestamp: "2019-11-10"
         }
       ]
     };

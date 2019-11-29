@@ -35,10 +35,8 @@ export default {
       })
       .then(data => {
         data.forEach(ele => {
-          setTimeout(() => {
-            ele.type === "exhibition" && this.exhibitionData.push(ele);
-            ele.type === "collapse" && this.collapseData.push(ele);
-          }, 2002);
+          ele.type === "exhibition" && this.exhibitionData.push(ele);
+          ele.type === "collapse" && this.collapseData.push(ele);
         });
       });
   }

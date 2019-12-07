@@ -1,6 +1,7 @@
 <template>
   <div class="E-card-list">
-    <el-row :gutter="10">
+    <van-skeleton title :row="7" v-if="!listData.length" />
+    <el-row v-else :gutter="10">
       <el-col
         :xs="12"
         :sm="12"
@@ -18,54 +19,20 @@
 
 <script>
 import ECard from "./E-card.vue";
+import { api } from "@/plug-in/api.js";
 export default {
   components: { ECard },
+  created() {
+    // 通过网络，获取插件数据。
+    api
+      .get("http://api.a-1.vip", {
+        url: "http://a-1.vip/data/via_plugin.json"
+      })
+      .then(data => (this.listData = data || []));
+  },
   data() {
     return {
-      listData: [
-        {
-          title: "轻插件",
-          name: "plug-in",
-          icon: "el-icon-s-grid",
-          url: "http://via-app.cn",
-          bgClass:'bg-cyan'
-        },
-        {
-          title: "数据存储",
-          name: "dbank",
-          icon: "el-icon-upload",
-          url: "http://a-1.vip/yun",
-          bgClass:'bg-blue'
-        },
-        {
-          title: "音乐播放器",
-          name: "Music-Player",
-          icon: "el-icon-headset",
-          url: "http://a-1.vip/demo/myPlayer",
-          bgClass:'bg-purple'
-        },
-        {
-          title: "全网音乐解析",
-          name: "music",
-          icon: "el-icon-finished",
-          url: "http://a-1.vip/music",
-          bgClass:'bg-mauve'
-        },
-        {
-          title: "今日热榜",
-          name: "Hot list",
-          icon: "el-icon-s-data",
-          url: "https://tophub.today",
-          bgClass:'bg-pink'
-        },
-        {
-          title: "卧底小游戏",
-          name: "dinting",
-          icon: "el-icon-view",
-          url: "http://a-1.vip/demo/dinting",
-          bgClass:'bg-brown'
-        }
-      ]
+      listData: []
     };
   }
 };

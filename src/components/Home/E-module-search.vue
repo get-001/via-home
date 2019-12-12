@@ -258,7 +258,8 @@ export default {
         sm: "https://so.m.sm.cn/s?q=",
         google: "https://www.google.com/search?q=",
         magi: "https://magi.com/search?q=",
-        music: ""
+        music: "",
+        bing: "https://cn.bing.com/search?q="
       },
       entry: {
         web: [],

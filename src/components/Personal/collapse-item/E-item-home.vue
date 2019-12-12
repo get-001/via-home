@@ -51,8 +51,8 @@ export default {
     return {
       searchEngine: {
         title: "搜索引擎",
-        valueArr: ["百度", "神马", "Google"],
-        nameArr: ["baidu", "sm", "google"]
+        valueArr: ["百度", "神马", "Google", "必应"],
+        nameArr: ["baidu", "sm", "google", "bing"]
       },
       navType: {
         title: "导航类型",
